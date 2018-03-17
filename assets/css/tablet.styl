@@ -1,0 +1,850 @@
+@import "variables.styl"
+
+@media all and (min-width: 1000px) and (max-width: 1171px) and (orientation:portrait)
+
+  html, body
+    box-sizing border-box
+    color negro
+    font-family 'Avenir', 'sans-serif'
+    font-size texto-regular
+    font-weight 300
+    margin 0
+    padding 0
+
+  *, *:before, *:after
+    box-sizing inherit
+    margin 0
+    padding 0
+
+  a
+    text-decoration none
+
+  a:hover
+    color o-turquesa
+
+  footer
+    background plomo
+    color blanco
+    padding 20px 0
+    width 100%
+
+  h1, h2, h3, h4, h5, h6
+    color negro
+    font-family 'Cinzel', 'serif'
+    font-weight 700
+    margin 0 0 5px 0
+
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
+    color negro
+    font-family 'Cinzel', 'serif'
+    font-weight 700
+    margin 0 0 5px 0
+
+  header
+    display grid
+    padding 30px 0
+    width 100%
+
+  hr
+    border none
+    border-top 0.5px solid turquesa
+    opacity 0.2
+
+  img
+    width 100%
+
+  nav
+    background-color turquesa
+    padding 15px 0
+    width 100%
+
+  li
+    list-style none
+
+  p
+    margin 0 0 5px 0
+
+  .head-movil
+      display none
+      
+  .main
+    display grid
+    max-width maxima-dimension-1000
+
+  .head-bloque-1
+    align-items center
+    display grid
+    grid-template-columns 1fr 0.5fr 1fr
+    justify-content center
+    margin 0 auto
+    max-width maxima-dimension-1000
+
+  .contactos
+    display grid
+    grid-template-columns 1fr
+    grid-template-rows 1fr 1fr
+
+  .escribenos
+    align-items end
+    display nons
+    color plata
+    text-align right
+    font-size texto-xs
+    font-weight 700
+    text-transform uppercase
+
+    span
+      display block
+      padding-bottom 3px
+
+  .contactar
+    display grid
+    grid-template-columns auto auto
+    grid-gap 0
+    text-align right
+
+  .boton-contacto
+    color turquesa
+    font-size texto-md
+    font-weight 800
+
+  .boton-contacto:first-child
+    margin-right 20px
+
+
+  // MENU
+
+  .main-menu
+    display grid
+    grid-template-columns repeat(6, auto)
+    list-style none
+    margin 0 auto
+    max-width maxima-dimension-1000
+
+    .menu-item
+      list-style none
+
+      .link-menu
+        color blanco
+        font-weight 600
+        font-size texto-xs
+        text-transform uppercase
+
+      .link-menu:hover
+        color o-turquesa
+
+    .menu-item:last-child
+        text-align right
+
+        .link-menu
+          background blanco
+          border-radius borde-suave
+          color turquesa
+          font-weight 700
+          padding 10px 45px
+
+        .link-menu:hover
+            background o-turquesa
+            border-radius borde-suave
+            box-shadow 2px 2px 0px rgba(255,255,255,0.3)
+            color blanco
+            font-weight 700
+            padding 15px 45px
+
+  // Sección SERVICIOS
+
+  .servicios
+    display grid
+    grid-template-columns 1fr 1fr 1fr 1fr
+    grid-gap 5px
+    margin 0 auto
+    margin-bottom 40px
+    margin-top 40px
+    max-width maxima-dimension-1000
+
+    h2
+      color plomo
+      font-size 1rem
+
+      small
+        font-size 0.7rem
+
+  .menu-servicio
+    margin-top 20px
+
+  .menu-servicio>ul>li
+    list-style none
+    font-size 0.8rem
+    margin 5px 0
+
+    a
+      color turquesa
+
+    a:hover
+      text-decoration underline
+
+  .item-servicio:last-child
+    text-align right
+
+    .menu-servicio
+      text-transform uppercase
+
+  .form-select
+    display block
+    background relleno-formulario
+    border 1px solid borde-formulario
+    color gris
+    font-family 'Avenir', 'sans-serif'
+    font-size texto-lg
+    height 22px
+    margin 3px 0
+    padding 15px
+    width 100%
+
+  .form-button
+    display block
+    background relleno-formulario
+    border 1px solid turquesa
+    border-radius 3px
+    color turquesa
+    font-family 'Avenir', 'sans-serif'
+    font-size texto-md
+    height 32px
+    margin 3px 0
+    width 100%
+
+  .form-button:hover
+    background turquesa
+    color blanco
+
+
+  //noticias
+  .titulo-principal-noticias
+    align-content center
+    display grid
+    grid-template-columns 1fr 1fr
+
+    h4
+      align-content center
+      display grid
+      font-family 'Avenir', 'sans-serif' !important
+      margin 0
+      text-align right
+
+      a
+        font-family 'Avenir', 'sans-serif' !important
+        font-size texto-sm
+        margin 0
+        text-transform uppercase
+        text-align right
+
+  .noticias
+    margin 0 auto
+    margin-bottom 20px
+    margin-top 20px
+    max-width maxima-dimension-1000
+
+  .bloque-noticias
+    display grid
+    grid-template-columns 3fr 1fr
+
+
+  .noticias-horizontal-vertical
+    display grid
+    grid-template-columns 1fr
+    grid-template-rows 1fr
+
+  .noticias-horizontal
+    display grid
+    grid-template-rows 1fr 1fr
+
+  .noticia-horizontal
+    display grid
+    grid-template-columns 1fr 1fr
+    grid-template-rows 1fr
+
+    .imagen
+      height 100%
+      overflow hidden
+      width 100%
+
+      img
+        height 100%
+
+    .descripcion-noticia
+      align-content center
+      background blanco2
+      display grid
+      // max-width 293px
+      padding 20px
+
+      a
+        color negro
+        display block
+        margin-bottom 10px
+
+      .fecha
+        color gris
+        font-size texto-xs
+        font-weight 700
+        margin-bottom 15px
+
+      .descripcion
+        color plata
+        font-size texto-md
+
+  .noticia-horizontal:last-child
+    display grid
+    grid-template-columns 1fr 1fr
+    grid-template-rows 1fr
+
+    .descripcion-noticia
+      background verde
+      order 1
+
+      a
+        color negro
+        display block
+        margin-bottom 10px
+
+    .imagen
+      order 2
+
+      img
+        height 100%
+
+    .fecha
+      color blanco
+      margin-bottom 15px
+
+  .noticia-vertical-h
+    display grid
+    grid-template-columns 1fr 1fr
+    grid-template-rows 1fr
+
+    .imagen
+      height 100%
+      overflow hidden
+      width 100%
+
+      img
+        height 100%
+
+    .descripcion-noticia
+      align-content center
+      background blanco2
+      display grid
+      padding 20px
+
+      a
+        color negro
+        display block
+        margin-bottom 10px
+
+      .fecha
+        color gris
+        font-size texto-xs
+        font-weight 700
+        margin-bottom 15px
+
+      .descripcion
+        color plata
+        font-size texto-md
+
+  .noticia-vertical
+    display grid
+    grid-template-columns 1fr
+    grid-template-rows 1fr
+
+    .fecha
+      color blanco
+      display block
+      font-size texto-xs
+      font-weight 700
+      margin-bottom 15px
+
+    .descripcion-noticia-vertical
+      //background-color rgba(0,0,0,0.5)
+      //background-image url('assets/images/imagen-vertical.jpg')
+      color blanco
+      padding 60px 30px
+      position relative
+      z-index 1
+
+      a
+        color blanco
+        display block
+        margin-bottom 20px
+
+      .descripcion
+        font-size texto-md
+
+    .imagen-vertical
+      overflow hidden
+      position relative
+      z-index -1
+      width 100%
+
+
+  .btn-leer-mas
+    display block
+    color plomo
+    font-size texto-md
+    margin-top 10px
+    text-transform uppercase
+
+  // Eventos
+  .eventos
+    margin 0 auto
+    margin-bottom 40px
+    margin-top 40px
+    max-width maxima-dimension-1000
+
+  .lista-eventos
+    display grid
+    grid-template-columns repeat(4, 1fr)
+    grid-gap 2px
+
+  .titular-evento
+    align-content center
+    background turquesa
+    color blanco
+    display grid
+    grid-template-columns 2fr 1fr
+    padding 10px 10px 5px 10px
+
+    a h3
+      color blanco
+      font-size texto-md
+
+    svg
+      display block
+      float right
+      margin-top 1px
+      font-size texto-md
+
+  .detalle-evento
+    display grid
+    grid-template-columns 1fr
+    padding 10px
+
+  .item-evento
+    margin 5px 0
+
+  .item-1
+    color negro
+    a
+      color negro
+      font-weight 700
+
+  .item-1, .item-2, .item-3
+    align-content center
+    display grid
+    grid-template-columns 1fr 8fr
+
+    .desc
+      font-size texto-sm
+
+    .lugar, .hora
+      color gris
+      font-size texto-sm
+      margin 2px 0 0 3px
+
+  .text-right
+    text-align right
+
+  // footer
+  .contenedor-footer
+    display grid
+    grid-template-columns 1fr 1fr 2fr
+    grid-gap 10px
+    margin 0 auto
+    max-width maxima-dimension-1000
+
+  .logo-footer
+    grid-column 1 / -1
+    padding 20px 0 10px 0
+
+    img
+      width 266px
+
+  .direcciones
+    padding 20px 0
+
+    .direccion
+      padding-bottom 20px
+
+      .ciudad
+        font-weight 700
+        text-transform uppercase
+
+      .telefonos, .detalle-direccion
+        font-size texto-md
+
+  .redes
+    padding 20px 0
+
+    .titulo-redes
+      font-weight 700
+      text-transform uppercase
+
+    ul
+      padding 20px 0
+
+      li
+        margin 15px 0
+
+        a
+          color blanco
+
+          .red
+            align-content center
+            display grid
+            grid-template-columns 1fr 9fr
+
+            .icono
+              text-align center
+
+        a:hover
+          text-decoration underline
+
+  .info-adicional
+    padding 20px 0
+
+    .titulo-mensaje
+      font-weight 700
+      text-transform uppercase
+
+
+  // DETALLE NOTICIAS
+
+  .main-noticia
+    display grid
+    grid-template-columns 3fr 1fr
+    margin 0 auto
+    max-width maxima-dimension-1000
+
+  article.noticia
+    //box-shadow 0px 0px 8px rgba(0,0,0,0.3)
+    border-left 1px solid blanco
+    border-right 1px solid blanco
+    color negro
+
+  .foto-noticia
+    display block
+    height 425px
+    overflow hidden
+    width 100%
+
+  .detalle-noticia
+    padding 40px 100px 40px 60px
+
+  .fecha-categoria
+    display block
+    margin 15px 0
+
+    .fecha-noticia
+      color gris
+
+    .categoria
+      color turquesa
+
+  .resumen
+    margin 10px 0
+    font-weight 700
+
+  .redaccion-noticia
+    font-size texto-lg
+    padding 15px 0
+
+  .side-bar
+    padding 30px 0 20px 30px
+    width 100%
+
+  .side-noticia
+    margin-top 20px
+
+    .fecha-side-noticia
+      color gris
+      font-size texto-xs
+      font-weight 700
+      margin 5px 0
+
+  .foto-side-noticia
+    height 120px
+    overflow hidden
+    width 100%
+
+  .margin-less
+    margin-top 0
+
+
+  // DETALLE EVENTO
+
+  .detalles-evento
+    align-content center
+    display grid
+    grid-template-columns 1fr 1fr 1fr
+    margin 20px 0
+    text-align center
+
+  .locacion-evento, .fecha-evento, .hora-evento
+    padding 20px 0
+
+  .locacion-evento svg, .fecha-evento svg, .hora-evento svg
+    color verde
+    font-size texto-xl
+
+  .locacion-evento p, .fecha-evento p, .hora-evento p
+      margin 10px 0
+
+  .mapa-evento
+    margin-top 20px
+
+
+  //OFERTA ACADEMICA
+  .main-oferta-academica
+    margin 0 auto
+    max-width maxima-dimension-1000
+
+  .contenedor-principal
+    margin 0 auto
+    margin-bottom 40px
+    margin-top 20px
+    max-width maxima-dimension-1000
+
+    .navegador
+      display block
+      text-align left
+      width 100%
+
+      a
+        color negro
+        font-size texto-sm
+        font-weight 600
+
+  .lista-sedes
+    display grid
+    grid-template-columns 1fr 1fr 1fr
+    grid-gap 10px
+    padding 20px 0
+
+    .sede
+      align-content center
+      display grid
+      margin 0 auto
+      text-align center
+      width 100%
+
+      a, a h2
+        color blanco
+        font-weight 500
+
+      a:hover
+        text-decoration underline
+
+    .sede-guayaquil
+      background url('../images/bg-sede-guayaquil.jpg') no-repeat center center
+      border-radius 3px
+      height 240px
+      max-width 385px
+
+    .sede-quito
+      background url('../images/bg-sede-quito.jpg') no-repeat center center
+      height 240px
+      max-width 385px
+
+    .sede-machala
+      background url('../images/bg-sede-machala.jpg') no-repeat center center
+      height 240px
+      max-width 385px
+
+    .carrera
+      display grid
+      grid-gap 0
+      grid-template-rows 1fr 70px
+
+      a
+        display block
+        height auto
+        overflow hidden
+
+        .imagen-carrera
+          width 100%
+
+      .descripcion-carrera
+        background relleno-formulario
+        display grid
+        grid-template-columns 1fr 1fr
+        padding 15px
+
+        .titulo-carrera
+          color negro
+          text-align left
+          text-transform uppercase
+
+          a
+            color negro
+            font-weight 700
+            text-align left
+
+        .informacion-adicional-carrera
+          text-align right
+
+          p
+            color gris
+            font-size texto-sm
+            margin-bottom 0
+
+          p:first-child
+            font-weight 600
+            text-transform uppercase
+
+  .division-carreras-sidebar
+    display grid
+    grid-template-columns 3fr 1fr
+    margin 0 auto
+    max-width maxima-dimension-1000
+
+
+  article.carrera__panel__izquierdo
+    color negro
+    padding 20px 0
+
+    h1
+      font-size texto-xxl
+
+    .etiquetas-carrera
+      display grid
+      grid-template-columns 1fr 1fr
+      padding 20px 0
+
+      p small
+        color plomo
+        font-size texto-sm
+
+  .tabs__3-tabs
+    display grid
+    grid-template-columns 1fr 1fr 1fr
+    grid-template-rows 1fr auto
+    grid-template-areas
+      "t-1 t-2 t-3"
+      "ver ver ver"
+    padding 20px 0
+
+    label
+      align-content center
+      background negro
+      border-right 1px dashed blanco2
+      color blanco2
+      cursor pointer
+      display grid
+      height 50px
+      padding 20px auto
+      text-align center
+
+    section
+      border 1px solid borde-formulario
+      display none
+      padding 20px
+
+      h2
+        font-size texto-lg
+
+      p
+        padding 15px 0
+
+      ol li
+        list-style decimal
+        margin-left 20px
+
+      ul li
+        list-style circle
+        margin 20px 0
+        margin-left 20px
+
+  input:checked + label
+    background gris
+    color negro
+
+  #tab-1:checked ~ #contenido-1,
+  #tab-2:checked ~ #contenido-2,
+  #tab-3:checked ~ #contenido-3
+    display block
+    grid-column 1 / -1
+
+  .btn-info-adicional
+    background turquesa
+    color blanco2
+    display block
+    margin 20px 0 -10px 0
+    padding 15px 20px
+
+    svg
+      margin-top 2px
+
+  .btn-info-adicional-inscribete
+    background white
+    border 1px solid turquesa
+    color turquesa
+    display block
+    margin 20px 0
+    padding 15px 20px
+    text-transform uppercase
+
+    svg
+      margin-top 2px
+
+  .btn-info-adicional-inscribete:hover
+    background turquesa
+    color blanco2
+
+  .lista-carreras-sidebar
+    padding 10px 0
+
+    li
+      margin 5px 0
+
+  .hide
+    display none
+
+  .right
+    float right
+
+  .btn
+    display inline-block
+    border 1px solid turquesa
+    border-radius 10px
+    color turquesa
+    font-weight 600
+    margin 10px 0
+    padding 15px
+
+  .btn:hover
+    background turquesa
+    color blanco2
+
+
+  .mision, .vision
+    padding 20px 0
+
+    h2
+      margin-bottom 20px
+
+    p
+      padding 20px 60px 0 20px
+      text-align justify
+
+
+  //COLUMNAS
+  .grid__2columnas
+    display grid
+    grid-template-columns repeat(2, 1fr)
+
+  .grid__3columnas
+    display grid
+    grid-template-columns repeat(3, 1fr)
+
+  .grid__4columnas
+    display grid
+    grid-template-columns repeat(4, 1fr)
