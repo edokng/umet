@@ -1,4 +1,10 @@
-<?php get_header(); ?>
+<?php
+/*
+Template name: Frontpage
+*/
+get_header();
+//die('hola');
+?>
 <main>
   <section class="servicios">
     <div class="item-servicio">
@@ -113,65 +119,77 @@
     </div>
     <br>
     <div class="bloque-noticias">
-      <?php
-        //consulta de noticias a la base
-        $args = array(
-          'post_per_page' => 4
-        );
-        $entradas = new WP_Query($args); while($entradas->have_posts() ): $entradas->the_post;
-          
-       ?>
       <div class="noticias-horizontal-vertical">
         <div class="noticias-horizontal">
           <!-- noticia -->
+          <?php
+            //consulta de noticias a la base
+            $args = array(
+              'posts_per_page' => 2
+            );
+            $entradasHorizontal = new WP_Query($args);
+            while($entradasHorizontal->have_posts() ): $entradasHorizontal->the_post();
+           ?>
           <div class="noticia-horizontal">
             <div class="imagen">
-              <img src="assets/images/noticia.jpg" alt="">
+              <?php the_post_thumbnail(); ?>
             </div>
             <div class="descripcion-noticia">
               <span class="fecha">Marzo 3, 2018</span>
               <h3>
-                <a href="noticias.html"><?php the title(); ?></a>
+                <a href="noticias.html"><?php the_title(); ?></a>
               </h3>
               <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius reprehenderit debitis dolore atque porro quam adipisci.</p>
               <a href="noticias.html" class="btn-leer-mas">Leer más</a>
             </div>
           </div>
-          <!-- noticia -->
-          <div class="noticia-horizontal">
-            <div class="imagen">
-              <img src="assets/images/noticia.jpg" alt="">
-            </div>
-            <div class="descripcion-noticia">
-              <span class="fecha">Marzo 3, 2018</span>
-              <h3>
-                <a href="noticias.html">Temporada de actualización de datos</a>
-              </h3>
-              <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius reprehenderit debitis dolore atque porro quam adipisci.</p>
-              <a href="noticias.html" class="btn-leer-mas">Leer más</a>
-            </div>
-          </div>
+          <?php
+            endwhile;
+            wp_reset_postdata();
+           ?>
         </div>
+        <?php
+          //consulta de noticias a la base
+          $args2 = array(
+            'posts_per_page' => 1,
+            'offset' => 2
+          );
+          $entradasV1 = new WP_Query($args2);
+          while($entradasV1->have_posts() ): $entradasV1->the_post();
+         ?>
         <div class="noticia-vertical-h">
           <div class="imagen">
-            <img src="assets/images/noticia.jpg" alt="">
+            <?php the_post_thumbnail(); ?>
           </div>
           <div class="descripcion-noticia">
             <span class="fecha">Marzo 3, 2018</span>
             <h3>
-              <a href="noticias.html">Temporada de actualización de datos</a>
+              <a href="noticias.html"><?php the_title(); ?></a>
             </h3>
             <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius reprehenderit debitis dolore atque porro quam adipisci.</p>
             <a href="noticias.html" class="btn-leer-mas">Leer más</a>
           </div>
         </div>
+        <?php
+          endwhile;
+          wp_reset_postdata();
+         ?>
       </div>
+      <?php
+        //consulta de noticias a la base
+        $args3 = array(
+          'posts_per_page' => 1,
+          'offset' => 3
+        );
+        $entradasV2 = new WP_Query($args3);
+        while($entradasV2->have_posts() ): $entradasV2->the_post();
+       ?>
       <div class="noticia-vertical">
         <div class="noticia-vertical">
-          <div class="descripcion-noticia-vertical" style="background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0)), url('assets/images/imagen-vertical.jpg');background-position:center center; ">
+          <div class="descripcion-noticia-vertical" style="background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0)), url('<?php echo get_the_post_thumbnail_url(); ?>');background-repeat:no-repeat;-position:center center;backgroung-size:container; ">
             <span class="fecha">Marzo 3, 2018</span>
             <h3>
-              <a href="noticias.html">Temporada de actualización de datos</a>
+              <a href="noticias.html"><?php the_title(); ?></a>
             </h3>
             <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius reprehenderit debitis dolore atque porro quam adipisci.</p>
             <a href="noticias.html" class="btn-leer-mas">Leer más</a>

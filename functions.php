@@ -17,6 +17,9 @@ function umet_styles(){
 add_action('wp_enqueue_scripts', 'umet_styles'); //ejecuta la funcion que llama a los estilos y scripts
 add_theme_support('post-thumbnails'); //para que se vean las imágenes destacadas
 
+// Dimensión para imágenes
+//add_image_size('entradas', 293, 280);
+
 /* Navegación */
 
 register_nav_menus( array(
